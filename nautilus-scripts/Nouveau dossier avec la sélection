@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import os, subprocess, shutil
+def error(text):
+    subprocess.run(['zenity', '--error', '--text=' + text])
+files = [Path(p) for p in os.environ.get('NAUTILUS_SCRIPT_SELECTED_FILE_PATHS', '').splitlines() if p]
+if not files:
+    error('Sélectionnez des fichiers ou dossiers locaux.')
+    raise SystemExit(1)
+
+if len({p.parent for p in files}) != 1:
+    error('Sélectionnez des éléments dans un même dossier.')
+    raise SystemExit(1)
+answer = subprocess.run(['zenity', '--entry', '--title=Nouveau dossier avec la sélection', '--text=Nom du nouveau dossier :'], capture_output=True, text=True)
+if answer.returncode:
+    raise SystemExit(0)
+name = answer.stdout.strip()
+if not name or name in ('.', '..') or '/' in name:
+    error('Choisissez un nom de dossier simple, sans barre oblique.')
+    raise SystemExit(1)
+target = files[0].parent / name
+try:
+    target.mkdir()
+except OSError as exc:
+    error(str(exc))
+    raise SystemExit(1)
+for source in files:
+    try:
+        shutil.move(str(source), str(target / source.name))
+    except OSError as exc:
+        error('Déplacement interrompu : ' + str(exc))
+        raise SystemExit(1)

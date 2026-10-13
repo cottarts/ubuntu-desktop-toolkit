@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import os, subprocess
+
+def message(text):
+    subprocess.run(['zenity', '--error', '--text=' + text])
+
+files = [Path(p) for p in os.environ.get('NAUTILUS_SCRIPT_SELECTED_FILE_PATHS', '').splitlines() if p]
+if not files:
+    message('Sélectionnez au moins un fichier ou dossier local.')
+    raise SystemExit(1)
+
+default = files[0].name + '.rar' if len(files) == 1 else 'Archive.rar'
+choice = subprocess.run(['zenity', '--file-selection', '--save', '--confirm-overwrite', '--title=Compresser en RAR', '--filename=' + str(files[0].parent / default)], capture_output=True, text=True)
+if choice.returncode:
+    raise SystemExit(0)
+target = Path(choice.stdout.strip())
+if target.suffix.lower() != '.rar':
+    target = Path(str(target) + '.rar')
+if target.exists() or target.is_symlink():
+    message('Cette archive existe déjà. Choisissez un nouveau nom pour éviter de la modifier.')
+    raise SystemExit(1)
+result = subprocess.run(['rar', 'a', '-r', '-ep1', str(target.absolute()), '--'] + [str(p.absolute()) for p in files], capture_output=True, text=True)
+if result.returncode:
+    message('La compression a échoué.\n' + (result.stderr or result.stdout)[-2000:])
+else:
+    subprocess.run(['zenity', '--info', '--text=Archive créée : ' + str(target)])

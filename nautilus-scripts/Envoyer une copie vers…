@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import os, subprocess, shutil
+def error(text):
+    subprocess.run(['zenity', '--error', '--text=' + text])
+files = [Path(p) for p in os.environ.get('NAUTILUS_SCRIPT_SELECTED_FILE_PATHS', '').splitlines() if p]
+if not files:
+    error('Sélectionnez des fichiers ou dossiers locaux.')
+    raise SystemExit(1)
+
+answer = subprocess.run(['zenity', '--list', '--title=Envoyer une copie vers…', '--column=Destination', 'Bureau', 'Documents', 'Choisir un dossier ou une clé USB…'], capture_output=True, text=True)
+if answer.returncode:
+    raise SystemExit(0)
+choice = answer.stdout.strip()
+if choice in ('Bureau', 'Documents'):
+    kind = 'DESKTOP' if choice == 'Bureau' else 'DOCUMENTS'
+    target = Path(subprocess.check_output(['xdg-user-dir', kind], text=True).strip())
+else:
+    answer = subprocess.run(['zenity', '--file-selection', '--directory', '--title=Choisir la destination'], capture_output=True, text=True)
+    if answer.returncode:
+        raise SystemExit(0)
+    target = Path(answer.stdout.strip())
+for source in files:
+    resolved = source.resolve()
+    destination = target.resolve()
+    if destination == resolved or resolved in destination.parents:
+        error('Impossible de copier un dossier à l’intérieur de lui-même.')
+        raise SystemExit(1)
+    if (target / source.name).exists() or (target / source.name).is_symlink():
+        error('Un élément nommé ' + source.name + ' existe déjà dans la destination. Aucun fichier n’a été copié.')
+        raise SystemExit(1)
+try:
+    target.mkdir(parents=True, exist_ok=True)
+    for source in files:
+        if source.is_symlink():
+            (target / source.name).symlink_to(os.readlink(source))
+        elif source.is_dir():
+            shutil.copytree(source, target / source.name, symlinks=True)
+        else:
+            shutil.copy2(source, target / source.name)
+except OSError as exc:
+    error('Copie interrompue : ' + str(exc))

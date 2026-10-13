@@ -1,0 +1,9 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  safety:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y python3-gi gir1.2-gtk-4.0
+      - run: /usr/bin/python3 -m unittest discover -s tests -v
