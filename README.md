@@ -12,7 +12,23 @@ Télécharge et décompresse le dépôt, puis exécute :
 python3 install.py --dependencies
 ```
 
-L’installation des dépendances demande une authentification Ubuntu. Les outils eux-mêmes sont installés pour ton compte, sans lancement permanent en administrateur. RAR est facultatif et doit être installé séparément pour utiliser la compression RAR.
+L’installation des dépendances demande une authentification Ubuntu. Les outils eux-mêmes sont installés pour ton compte, sans lancement permanent en administrateur. La compression RAR et le support d’extensions Nautilus sont installés avec les autres dépendances. Après installation, déconnecte puis reconnecte ta session pour charger la vue Ce PC dans Fichiers.
+
+## Toutes les fonctions incluses
+
+| Fonction | Accès |
+| --- | --- |
+| Ce PC, jauges bleues et disque Ubuntu en premier | Barre latérale de Fichiers |
+| Ce PC toujours en grille, indépendamment des dossiers | Automatique |
+| Moniteur système | Ctrl + Maj + Échap |
+| Documents texte, Markdown, Python et Bash | Clic droit → Nouveau document |
+| Choix des applications au démarrage | Menu → Applications au démarrage |
+| Création d’un lanceur avec nom et icône | Sélectionner un programme → clic droit → Scripts → Créer une application… |
+| Raccourcis, copie du chemin, envoi vers un dossier, RAR, rangement de la sélection | Clic droit → Scripts |
+| Renommage multiple | Sélectionner plusieurs fichiers puis F2 (fonction native) |
+| Nettoyeur et désinstalleur | Menu des applications et raccourcis bureau |
+
+Les modèles existants et les préférences d’affichage de tes dossiers sont conservés. Les fichiers remplacés sont sauvegardés. Si le dossier Bureau ou Modèles est désactivé dans ta configuration XDG, l’installateur n’écrit pas ces éléments dans ton dossier personnel à sa place.
 
 ## Désinstaller des applications
 
@@ -40,11 +56,15 @@ L’option RAM utilise `sync`, puis `vm.drop_caches=1` après authentification. 
 
 ## Actions de Fichiers
 
-Dans clic droit → Scripts : nouveau dossier avec la sélection, copie du chemin, envoi d’une copie vers un dossier, raccourci bureau, compression RAR. Les fichiers existants ne sont pas volontairement écrasés par les actions de copie.
+Dans clic droit → Scripts : nouveau dossier avec la sélection, copie du chemin, envoi d’une copie vers un dossier, raccourci bureau, compression RAR et création d’une application. Les fichiers existants ne sont pas volontairement écrasés par les actions de copie.
 
 ## Vue « Ce PC »
 
-La vue avec jauges est fournie par un projet tiers : [My Computer for Nautilus](https://github.com/yannmasoch/nautilus-my-computer), sous licence MIT. Son code n’est pas inclus dans ce dépôt. Elle doit être installée séparément ; les adaptations locales du poste d’origine ne sont pas distribuées ici. Elle utilise les structures internes de Nautilus et peut nécessiter une mise à jour après une mise à jour de GNOME.
+La vue avec jauges est incluse et installée automatiquement. Elle est basée sur [My Computer for Nautilus](https://github.com/yannmasoch/nautilus-my-computer), sous licence MIT, conservée dans `vendor/ce-pc/LICENSE`.
+
+Les adaptations sont incluses : nom Ce PC, système racine nommé Ubuntu, affichage du système en premier, jauges bleues et grille fixe. Aucun changement de la préférence globale de vue des dossiers. La version incluse est 0.13.2 ; son origine et les changements sont décrits dans `vendor/ce-pc/PROVENANCE.md`.
+
+L’extension utilise les structures internes de Nautilus et peut nécessiter une mise à jour après une mise à jour de GNOME. La configuration de référence est Ubuntu 26.04 / Nautilus 50.2.2 ; les versions plus anciennes ne sont pas garanties.
 
 ## Retirer le toolkit
 
@@ -52,7 +72,7 @@ La vue avec jauges est fournie par un projet tiers : [My Computer for Nautilus](
 python3 install.py --uninstall
 ```
 
-Seuls les fichiers installés et non modifiés sont retirés ; les versions antérieures sauvegardées sont restaurées. Les dépendances système restent installées.
+Seuls les fichiers installés et non modifiés sont retirés ; les versions antérieures sauvegardées sont restaurées. Les réglages modifiés par l’installateur sont restaurés lorsqu’ils n’ont pas été changés depuis. Les dépendances système restent installées. Reconnecte ta session après désinstallation pour recharger Fichiers.
 
 ## Tests
 
@@ -64,4 +84,4 @@ Les tests utilisent des simulations et des dossiers temporaires. Ils ne désinst
 
 ## Licence
 
-MIT pour le code de ce dépôt. Les icônes sont celles du thème installé et ne sont pas redistribuées. Les projets et logiciels tiers conservent leurs propres licences.
+MIT pour le code du toolkit. La licence et les crédits de l’extension Ce PC sont conservés dans `vendor/ce-pc`. Les icônes des lanceurs proviennent du thème installé ; les ressources et traductions de l’extension restent couvertes par sa licence d’origine.

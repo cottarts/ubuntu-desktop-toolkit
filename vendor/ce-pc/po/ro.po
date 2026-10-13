@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the My Computer for Nautilus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: My Computer for Nautilus 0.13.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-25 15:20-0700\n"
+"PO-Revision-Date: 2026-08-16 20:51+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: none\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#: nautilus_my_computer/bookmarks.py
+msgid "Change Icon"
+msgstr "Schimbă Pictograma"
+
+#: nautilus_my_computer/bookmarks.py
+msgid "Search icons…"
+msgstr "Caută pictograme…"
+
+#: nautilus_my_computer/bookmarks.py
+msgid "Reset"
+msgstr "Resetare"
+
+#: nautilus_my_computer/column_view.py
+msgid "Select"
+msgstr "Selectează"
+
+#: nautilus_my_computer/column_view.py
+msgid "Beta"
+msgstr "Beta"
+
+#: nautilus_my_computer/column_view.py
+msgid "Early access feature. It may contain bugs or inconsistencies."
+msgstr "Funcție de access timpuriu. Poate să conțină erori sau inconcordanțe."
+
+#: nautilus_my_computer/column_view.py
+msgid "Column View"
+msgstr "Afișaj Coloană"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "{n} item"
+msgid_plural "{n} items"
+msgstr[0] "{n} articol"
+msgstr[1] "{n} articole"
+msgstr[2] "{n} de articole"
+
+#: nautilus_my_computer/common.py
+msgid "Today"
+msgstr "Azi"
+
+#: nautilus_my_computer/common.py
+msgid "Yesterday"
+msgstr "Ieri"
+
+#: nautilus_my_computer/common.py
+msgid "Tomorrow"
+msgstr "Mâine"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "{n} day ago"
+msgid_plural "{n} days ago"
+msgstr[0] "Acum {n} zi"
+msgstr[1] "Acum {n} zile"
+msgstr[2] "Acum {n} de zile"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "In {n} day"
+msgid_plural "In {n} days"
+msgstr[0] "În {n} zi"
+msgstr[1] "În {n} zile"
+msgstr[2] "În {n} de zile"
+
+#: nautilus_my_computer/common.py
+msgid "This week"
+msgstr "Săptămâna acesta"
+
+#: nautilus_my_computer/common.py
+msgid "Last week"
+msgstr "Săptămâna trecută"
+
+#: nautilus_my_computer/common.py
+msgid "Next week"
+msgstr "Săptămâna viitoare"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "{n} week ago"
+msgid_plural "{n} weeks ago"
+msgstr[0] "Acum {n} săptămână"
+msgstr[1] "Acum {n} săptămâni"
+msgstr[2] "Acum {n} de săptămâni"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "In {n} week"
+msgid_plural "In {n} weeks"
+msgstr[0] "În {n} săptămână"
+msgstr[1] "În {n} săptămâni"
+msgstr[2] "În {n} de săptămâni"
+
+#: nautilus_my_computer/common.py
+msgid "This month"
+msgstr "Luna aceasta"
+
+#: nautilus_my_computer/common.py
+msgid "Last month"
+msgstr "Luna trecută"
+
+#: nautilus_my_computer/common.py
+msgid "Next month"
+msgstr "Luna viitoare"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "{n} month ago"
+msgid_plural "{n} months ago"
+msgstr[0] "Acum {n} lună"
+msgstr[1] "Acum {n} luni"
+msgstr[2] "Acum {n} de luni"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "In {n} month"
+msgid_plural "In {n} months"
+msgstr[0] "În {n} lună"
+msgstr[1] "În {n} luni"
+msgstr[2] "În {n} de luni"
+
+#: nautilus_my_computer/common.py
+msgid "This year"
+msgstr "Anul acesta"
+
+#: nautilus_my_computer/common.py
+msgid "Last year"
+msgstr "Anul trecut"
+
+#: nautilus_my_computer/common.py
+msgid "Next year"
+msgstr "Anul viitor"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "{n} year ago"
+msgid_plural "{n} years ago"
+msgstr[0] "Acum {n} an"
+msgstr[1] "Acum {n} ani"
+msgstr[2] "Acum {n} de ani"
+
+#: nautilus_my_computer/common.py
+#, python-brace-format
+msgid "In {n} year"
+msgid_plural "In {n} years"
+msgstr[0] "În {n} an"
+msgstr[1] "În {n} ani"
+msgstr[2] "În {n} de ani"
+
+#: nautilus_my_computer/components.py
+msgid "Rename"
+msgstr "Redenumește"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Open in New Tab"
+msgstr "Deschide într-un Tab Nou"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Open in New Window"
+msgstr "Deschide într-o Fereastră Nouă"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Open With…"
+msgstr "Deschide cu…"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Remove from Bookmarks"
+msgstr "Elimină din Marcaje"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Add to Bookmarks"
+msgstr "Adaugă în Marcaje"
+
+#: nautilus_my_computer/context_menu.py
+#: nautilus_my_computer/preferred_folders.py
+msgid "Unpin from My Computer"
+msgstr "Anulează fixarea din \"Computerul meu\""
+
+#: nautilus_my_computer/context_menu.py
+#: nautilus_my_computer/preferred_folders.py
+msgid "Pin to My Computer"
+msgstr "Fixează în Acest Calcultor"
+
+#: nautilus_my_computer/context_menu.py
+msgid "New Folder…"
+msgstr "Folder nou…"
+
+#: nautilus_my_computer/context_menu.py
+msgid "New Document"
+msgstr "Document nou"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Open in Terminal"
+msgstr "Deschide în Terminal"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Rename…"
+msgstr "Redenumește…"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Compress…"
+msgstr "Compresează…"
+
+#: nautilus_my_computer/context_menu.py
+msgid "Move to Trash"
+msgstr "Mută în Coșul de gunoi"
+
+#: nautilus_my_computer/main.py
+msgid "My Computer Settings"
+msgstr "Setările \"Computerului meu\""
+
+#: nautilus_my_computer/main.py
+msgid "Open My Computer"
+msgstr "Deschide \"Computerul meu\""
+
+#: nautilus_my_computer/main.py
+msgid "Recommended Apps"
+msgstr "Aplicații Recomandate"
+
+#: nautilus_my_computer/main.py
+msgid "Other Apps"
+msgstr "Alte Aplicații"
+
+#: nautilus_my_computer/main.py
+msgid "General"
+msgstr "General"
+
+#: nautilus_my_computer/main.py
+msgid "Computer view"
+msgstr "Vizualizare computer"
+
+#: nautilus_my_computer/main.py
+msgid "Start on the Computer view"
+msgstr "Pornește în \"Vizualizare computer\""
+
+#: nautilus_my_computer/main.py
+msgid "Launch directly to the Computer view instead of Home"
+msgstr "Pornește direct în \"Vizualizare computer\" în loc de \"Acasă\""
+
+#: nautilus_my_computer/main.py
+msgid "Panel visibility"
+msgstr "Vizibilitate Panou"
+
+#: nautilus_my_computer/main.py
+msgid ""
+"Choose how each group appears. Visible: shows the group as a normal "
+"separated section. Merged: folds the group into the On this Computer group. "
+"Hidden: hides the group entirely."
+msgstr ""
+"Alege cum apare fiecare grup. Vizibil: arată grupul ca o secțiune normală "
+"separată. Comasat: încorporează grupul în grupul \"Pe acest Computer\". "
+"Ascuns: ascunde grupul total."
+
+#: nautilus_my_computer/main.py
+msgid "Visible"
+msgstr "Vizibil"
+
+#: nautilus_my_computer/main.py
+msgid "Merged"
+msgstr "Încorporat"
+
+#: nautilus_my_computer/main.py
+msgid "Hidden"
+msgstr "Ascuns"
+
+#: nautilus_my_computer/main.py nautilus_my_computer/my_computer_view.py
+msgid "Preferred Folders"
+msgstr "Foldere Preferate"
+
+#: nautilus_my_computer/main.py
+msgid "Show system partitions"
+msgstr "Arată partițiile de sistem"
+
+#: nautilus_my_computer/main.py
+msgid "Include boot and EFI partitions in the System group"
+msgstr "Include partițiile boot și EFI în grupul System"
+
+#: nautilus_my_computer/main.py
+msgid "Sidebar visibility"
+msgstr "Vizibilitatea bării laterale"
+
+#: nautilus_my_computer/main.py
+msgid "Choose which locations appear on the sidebar."
+msgstr "Arată ce locații apar pe bara laterală."
+
+#: nautilus_my_computer/main.py
+msgid "Bar Color"
+msgstr "Culoarea Bării"
+
+#: nautilus_my_computer/main.py
+msgid "Select or customize the bar color."
+msgstr "Selectează sau personalizează culoarea bării."
+
+#: nautilus_my_computer/main.py
+msgid "Color mode"
+msgstr "Mod de culoare"
+
+#: nautilus_my_computer/main.py
+msgid "System accent"
+msgstr "Accentul sistemului"
+
+#: nautilus_my_computer/main.py
+msgid "Custom color"
+msgstr "Culoare personalizată"
+
+#: nautilus_my_computer/main.py
+msgid "Custom gradient"
+msgstr "Gradient personalizat"
+
+#: nautilus_my_computer/main.py
+msgid "Color"
+msgstr "Culoare"
+
+#: nautilus_my_computer/main.py
+msgid "Start color"
+msgstr "Culoarea de început"
+
+#: nautilus_my_computer/main.py
+msgid "End color"
+msgstr "Culoarea de sfârșit"
+
+#: nautilus_my_computer/main.py
+msgid "Extension"
+msgstr "Extensie"
+
+#: nautilus_my_computer/main.py
+msgid "Version"
+msgstr "Versiune"
+
+#: nautilus_my_computer/main.py
+msgid "Author"
+msgstr "Autor"
+
+#: nautilus_my_computer/main.py
+msgid "Source code"
+msgstr "Cod sursă"
+
+#: nautilus_my_computer/main.py
+msgid "GitHub"
+msgstr "GitHub"
+
+#: nautilus_my_computer/my_computer_view.py
+msgid "Mount"
+msgstr "Montează"
+
+#: nautilus_my_computer/my_computer_view.py
+msgid "System"
+msgstr "Sistem"
+
+#: nautilus_my_computer/my_computer_view.py
+msgid "On this Computer"
+msgstr "Pe acest Calculator"
+
+#: nautilus_my_computer/my_computer_view.py
+msgid "Removable"
+msgstr "Înlăturabil"
+
+#: nautilus_my_computer/my_computer_view.py
+msgid "Disc"
+msgstr "Disc"
+
+#: nautilus_my_computer/widgets.py
+msgid "Not mounted"
+msgstr "Nemontat"
+
+#: nautilus_my_computer/widgets.py
+#, python-brace-format
+msgid "{free} free of {total}"
+msgstr "{free} liber din {total}"
+
+#: nautilus_my_computer/widgets.py
+msgid "Program"
+msgstr "Program"
+
+#: nautilus_my_computer/widgets.py
+msgid "Audio"
+msgstr "Audio"
+
+#: nautilus_my_computer/widgets.py
+msgid "Font"
+msgstr "Font"
+
+#: nautilus_my_computer/widgets.py
+msgid "Image"
+msgstr "Imagine"
+
+#: nautilus_my_computer/widgets.py
+msgid "Archive"
+msgstr "Arhivă"
+
+#: nautilus_my_computer/widgets.py
+msgid "Markup"
+msgstr "Markup"
+
+#: nautilus_my_computer/widgets.py
+msgid "Text"
+msgstr "Text"
+
+#: nautilus_my_computer/widgets.py
+msgid "Video"
+msgstr "Video"
+
+#: nautilus_my_computer/widgets.py
+msgid "Contacts"
+msgstr "Contacte"
+
+#: nautilus_my_computer/widgets.py
+msgid "Calendar"
+msgstr "Calendar"
+
+#: nautilus_my_computer/widgets.py
+msgid "Document"
+msgstr "Document"
+
+#: nautilus_my_computer/widgets.py
+msgid "Presentation"
+msgstr "Prezentare"
+
+#: nautilus_my_computer/widgets.py
+msgid "Spreadsheet"
+msgstr "Foaie de calcul"
+
+#: nautilus_my_computer/widgets.py
+msgid "Dimensions"
+msgstr "Dimensiuni"
